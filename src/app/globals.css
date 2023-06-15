@@ -26,10 +26,12 @@ body {
     rgb(var(--background-start-rgb));
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
+   
+
 }
 
 /* 
   Cores Dark Mode
-  rgb(45, 52, 54)
-  rgb(52, 73, 94) 
+  rgb(45, 52, 54) -> #2d3436
+  rgb(52, 73, 94) -> #34495e 
 */

@@ -15,7 +15,8 @@ module.exports = {
     },
     colors: {
       'chumbo': '#2d3436',
-      'ferro': '#34495e'
+      'ferro': '#34495e',
+      'preto': '#000000',
     },
   },
   plugins: [],
