@@ -41,14 +41,16 @@ export default function regraDe3(){
                             name='num1' 
                             value={num1} 
                             onChange={(e:any) => setNum1(e.target.value) } 
+                            className={`dark:text-black`}
                         />
-                        <div className={styles.estaPara}><p>Está Para</p></div>
+                        <div className={`${styles.estaPara} `}><p>Está Para</p></div>
                         <input 
                             type="text" 
                             placeholder={`0`} 
                             name='num2' 
                             value={num2} 
                             onChange={(e:any) => setNum2(e.target.value) }
+                            className={`dark:text-black`}
                         />
                     </div>
                     <div className={styles.formRegra}>
@@ -58,6 +60,7 @@ export default function regraDe3(){
                             name='num3' 
                             value={num3} 
                             onChange={(e:any) => setNum3(e.target.value) }
+                            className={`dark:text-black`}
                         />
                         <div className={styles.estaPara}><p>Está Para</p></div>
                         <input 
@@ -66,6 +69,7 @@ export default function regraDe3(){
                             name='num4' 
                             value={resultado} 
                             readOnly
+                            className={`dark:text-black`}
                         />
                     </div>
                     <div className={styles.formRegra}>
