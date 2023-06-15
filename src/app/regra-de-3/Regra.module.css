@@ -1,0 +1,109 @@
+.regraArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    min-height: 100vh;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.formRegra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.formRegra input{
+    width: 100px;
+    text-align: center;
+}
+
+.formRegra input::placeholder{
+    text-align: center;
+}
+
+.regraTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.estaPara{
+    background-color: #e84118;
+    color: #ffffff;
+    font-weight: 700;
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.resultado{
+    font-weight: 700;
+    transition: all 300ms;
+    animation: aparecer 300ms ease-in;
+    display: flex;
+    justify-content: center;
+    background-color: #44bd32;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.resultadoHidden{
+    animation: desaparecer 300ms ease-in;
+    transition: all 300ms;
+    display: none;
+}
+
+.btnReset{
+    background: transparent;
+}
+
+.btnReset:focus{
+    transform: rotate(-360deg);
+    transition: all 800ms ease-in-out;
+}
+
+
+
+
+
+@keyframes aparecer {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    from{
+        transform: scale(1);
+        opacity: 1;
+        
+    }
+    to{
+        transform: scale(0);
+        opacity: 0;
+        
+    }
+}
