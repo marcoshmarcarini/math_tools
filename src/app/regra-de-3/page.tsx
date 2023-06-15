@@ -32,7 +32,7 @@ export default function regraDe3(){
     return(
         <>
             <div className={styles.regraArea}>
-                <h3 className={styles.regraTitulo}>Regra de 3</h3>
+                <h3 className={`${styles.regraTitulo} dark:text-white`}>Regra de 3</h3>
                 <form className={styles.formulario} onSubmit={handleRegradeTres}>
                     <div className={styles.formRegra}>
                         <input 
@@ -87,7 +87,7 @@ export default function regraDe3(){
                 </div>
                 <button onClick={handleReset} className={styles.btnReset}>
                     <Image 
-                        src={`https://img.icons8.com/ios/30/update-left-rotation.png`} 
+                        src={`https://img.icons8.com/ios/30/ffffff/update-left-rotation.png`} 
                         width={30} 
                         height={30} 
                         alt={`Restart`}
