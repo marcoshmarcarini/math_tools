@@ -27,6 +27,23 @@ export default function Home() {
         </Link>
       </div>
 
+      <div className="mb-32 mt-32 flex text-center justify-center items-center">
+        <Link href={`/conversor-de-temperatura`}
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Conversor de <br/> Temperatura{' '}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Converta de forma simples valores de temperatura de Celsius para Farenheit.
+          </p>
+        </Link>
+      </div>
+
       <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-chumbo dark:via-ferro lg:static lg:h-auto lg:w-auto lg:bg-none">
         <a
           className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
