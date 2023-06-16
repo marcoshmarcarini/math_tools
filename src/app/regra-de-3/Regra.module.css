@@ -95,6 +95,28 @@
 }
 
 
+/* Parte com o conteúdo */
+
+.RegraTextosArea{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    gap: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 100vh;
+}
+
+.RegraTextosArea h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.RegraTextosArea p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
 
 
 

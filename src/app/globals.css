@@ -25,7 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 100vw 100%;
    
 
 }

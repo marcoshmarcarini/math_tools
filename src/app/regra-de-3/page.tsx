@@ -110,6 +110,38 @@ export default function regraDe3(){
                     </p> */}
                     </Link>
                 </div>
+                <div className={styles.RegraTextosArea}>
+                    <h2>Explicando a Regra de Três</h2>
+                    <p>
+                        Imagine que você tem uma caixa de balas e quer dividir igualmente com seus
+                        dois amigos. Se você tem 12 balas, você pode dar 6 para cada amigo. Isso é 
+                        fácil de entender, certo?
+                    </p>
+                    <p>
+                        A regra de três é um pouco parecida com isso, mas com números diferentes. 
+                        Ela nos ajuda a descobrir quantas coisas temos quando sabemos a quantidade 
+                        de outras coisas.
+                    </p>
+                    <p>
+                        Vou dar um exemplo para ficar mais claro. Imagine que você está em uma loja 
+                        e quer comprar 3 brinquedos que custam R$15,00 cada. Você quer saber quanto 
+                        vai custar no total.
+                    </p>
+                    <p>
+                        Aqui está a regra de três simples: <br/>
+                        Se 1 briquedo custa R$15, então 3 brinquedos vão custar o quê?
+                    </p>
+                    <p>
+                        Para resolve isso, vamos fazer uma conta bem fácil. Vamos multiplicar o número 
+                        de brinquedos pelo preço de cada brinquedo: <br />
+                        3 (brinquedos) X R$15 (preço de cada brinquedo) = R$45 (total)
+                    </p>
+                    <p>
+                        A regra de três pode ser usada em muitas situações diferentes, não só para 
+                        comprar brinquedos. Ela nos ajuda a descobrir quantas coisas temos ou precisamos 
+                        quado conhecemos outras quantidades. É uma ferramenta matemática muito útil!
+                    </p>
+                </div>
             </div>
         </>
     )
