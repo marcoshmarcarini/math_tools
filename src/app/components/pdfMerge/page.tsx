@@ -1,3 +1,5 @@
+"use client"
+
 import React, { ChangeEvent, useState } from 'react';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import styles from '@/app/components/pdfMerge/pdfMerge.module.css';
