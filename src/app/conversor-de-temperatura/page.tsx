@@ -18,16 +18,23 @@ export default function ConversorTemp(){
 
     const [convert, setConvert] = useState('')
     const [temp, setTemp] = useState('')
+    const [celsius, setCelsius] = useState('')
+    const [farenheit, setFarenheit] = useState('')
+   
 
-    const celsius = 'C'
-    const farenheit = 'F'
+    if(celsius){
+
+    }else{
+
+    }
 
     const handleConvert = (e:any) => {
         e.preventDefault()
+        
+        console.log(celsius)
+        console.log(farenheit)
 
         const temperatura = temp
-        const escolha = document.getElementsByName('temp')
-        console.log(escolha.value == celsius)
 
         if(Number(temperatura) > 0){
             const c = Number(temp)
@@ -48,14 +55,14 @@ export default function ConversorTemp(){
                     <div className="flex gap-5">
                         <div className="flex gap-1">
                             <label htmlFor="temp">ºC</label>
-                            <input type="radio" value={celsius} name="temp" id={`celsius`}/>
+                            <input type="radio" value={celsius} name="temp" id={`celsius`} onClick={(e:any) => setCelsius(e.target.value)}/>
                         </div>
                         <div className="flex gap-1">
                             <label htmlFor="temp">ºF</label>
-                            <input type="radio" value={farenheit} name="temp" id={`farenheit`}/>
+                            <input type="radio" value={farenheit} name="temp" id={`farenheit`} onClick={(e:any) => setFarenheit(e.target.value)}/>
                         </div>
                     </div>
-                    <input type="text" placeholder="Temperatura" onChange={(e:any) => setTemp(e.target.value)}/>
+                    <input type="text" placeholder="Temperatura" onChange={(e:any) => setTemp(e.target.value)} />
                     <input type="submit" value={`Converter`} />
                 </form>
                 <div>{`${Number(convert)}`}</div>

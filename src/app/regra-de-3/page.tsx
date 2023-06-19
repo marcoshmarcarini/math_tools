@@ -3,7 +3,8 @@
 import styles from '@/app/regra-de-3/Regra.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SetStateAction, useEffect, useState } from 'react'
+import { SetStateAction, Suspense, useEffect, useState } from 'react'
+import Loading from '../loading'
 
 
 
@@ -141,6 +142,7 @@ export default function regraDe3(){
                         comprar brinquedos. Ela nos ajuda a descobrir quantas coisas temos ou precisamos 
                         quado conhecemos outras quantidades. É uma ferramenta matemática muito útil!
                     </p>
+
                 </div>
             </div>
         </>

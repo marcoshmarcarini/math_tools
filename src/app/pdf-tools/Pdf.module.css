@@ -1,0 +1,33 @@
+.pdfToolsContent{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdfTitle{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
