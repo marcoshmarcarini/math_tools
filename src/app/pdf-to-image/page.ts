@@ -28,10 +28,10 @@ export async function convertPDFToImage(req: NextApiRequest, res: NextApiRespons
       res.status(500).json({ success: false, error: 'Erro ao converter PDF para imagem' });
     }
   } else {
-    res.status(405).json({ success: false, error: 'Método não permitido' });
+    res.status(405).end('Método não permitido');
   }
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    return convertPDFToImage(req, res);
+  return convertPDFToImage(req, res);
 }
