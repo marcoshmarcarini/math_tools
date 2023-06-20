@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const options = {
       density: 100,
       saveFilename: 'untiled',
-      savePath: join(tmpdir(), 'images'), // Certifique-se de que a pasta "images" existe dentro de "public"
-      format: "png",
+      savePath: join(tmpdir(), 'images'), // Certifique-se de que a pasta "images" existe dentro da pasta de arquivos temporários
+      format: 'png',
       width: 600,
       height: 600,
     };
@@ -21,13 +21,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       const result = await storeAsImage(pageToConvertAsImage);
-      console.log("A primeira página foi convertida em uma imagem:", result);
+      console.log('A primeira página foi convertida em uma imagem:', result);
       res.status(200).json({ success: true, result });
     } catch (error) {
-      console.error("Erro ao converter PDF para imagem:", error);
-      res.status(500).json({ success: false, error: "Erro ao converter PDF para imagem" });
+      console.error('Erro ao converter PDF para imagem:', error);
+      res.status(500).json({ success: false, error: 'Erro ao converter PDF para imagem' });
     }
   } else {
-    res.status(405).json({ success: false, error: "Método não permitido" });
+    res.status(405).json({ success: false, error: 'Método não permitido' });
   }
 }
