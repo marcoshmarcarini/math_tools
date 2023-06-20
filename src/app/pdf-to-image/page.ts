@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+//import { NextApiRequest, NextApiResponse } from 'next';
 import { fromPath } from 'pdf2pic';
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-export async function convertPDFToImage(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler({req, res}:any): Promise<void> {
   if (req.method === 'POST') {
     const { file } = req.body;
 
@@ -30,8 +30,4 @@ export async function convertPDFToImage(req: NextApiRequest, res: NextApiRespons
   } else {
     res.status(405).end('Método não permitido');
   }
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  return convertPDFToImage(req, res);
 }
