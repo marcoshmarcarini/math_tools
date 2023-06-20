@@ -3,7 +3,7 @@ import { fromPath } from 'pdf2pic';
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function convertPDFToImage(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { file } = req.body;
 
@@ -30,4 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } else {
     res.status(405).json({ success: false, error: 'Método não permitido' });
   }
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return convertPDFToImage(req, res);
 }

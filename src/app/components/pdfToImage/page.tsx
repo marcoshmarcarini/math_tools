@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import {fromPath} from "pdf2pic";
+//import {fromPath} from "pdf2pic";
 
 export default async function PDFToImage(){
     
