@@ -1,34 +1,46 @@
 .pdfContent{
     display: flex;
     flex-direction: column;
-
+    padding: 0 20px 0 20px;
 }
 
 .pdfContent input[type="file"]{
-    display: flex;
+    display: none;
     flex-direction: column;
+    
+}
+
+.labelInput{
     border: 2px dashed #0097e6;
     border-radius: 10px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 100px;
     padding-bottom: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #88cff5;
+    color: #fff;
+    font-weight: 800;
+    transform: translateY(-100px);
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.pdfContent input[type="file"]:hover{
+.labelInput:hover{
     background-color: #0097e6;
     color: #fff;
     border: 2px solid #0097e6;
-    transition: all 400ms;
+    transition: all 600ms;
     cursor: pointer;
 }
-
 
 .pdfContent input[type="file"]::placeholder{
     display: flex;
     flex-direction: column;
 }
-
 
 #file-upload-button{
     border: none;

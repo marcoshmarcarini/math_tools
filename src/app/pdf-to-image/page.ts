@@ -1,11 +1,12 @@
 import { fromPath } from 'pdf2pic';
 import { tmpdir } from 'os';
 import { join } from 'path';
-import bodyParser from 'body-parser';
+
+const bodyParser = require('body-parser');
 
 const jsonParser = bodyParser.json();
 
-export default async function handler(req, res) {
+export default async function handler({req, res}: any) {
   if (req.method === 'POST') {
     // Use o middleware body-parser para analisar o corpo da requisição como JSON
     jsonParser(req, res, async () => {

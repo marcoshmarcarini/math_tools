@@ -2,6 +2,7 @@
 
 import React, { ChangeEvent, useState } from 'react';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
+import Link from 'next/link';
 import styles from '@/app/components/pdfMerge/pdfMerge.module.css';
 
 const PDFMerge: React.FC = () => {
@@ -42,9 +43,12 @@ const PDFMerge: React.FC = () => {
   };
 
   return (
-    <div className={styles.pdfContent}>
-      <input type="file" multiple onChange={handleFileChange} />
-    </div>
+    <>
+      <div className={styles.pdfContent}>
+        <label htmlFor={`arquivo`} className={styles.labelInput}>Enviar Arquivo</label>
+        <input type="file" multiple onChange={handleFileChange} id={`arquivo`} />
+      </div>
+    </>
   );
 };
 

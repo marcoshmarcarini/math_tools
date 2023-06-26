@@ -5,7 +5,9 @@ import { useState } from "react"
 export default function ConversorTemp(){
     /* 
         A regra para converter temperatura de celcius para ferenheit é simples:
-        
+        (C × 9/5) + 32 = F
+
+
         C -> F
         c / 5 = (f - 32) / 9
         c = (5*(f - 32)) / 9
@@ -18,34 +20,22 @@ export default function ConversorTemp(){
 
     const [convert, setConvert] = useState('')
     const [temp, setTemp] = useState('')
-    const [celsius, setCelsius] = useState('')
-    const [farenheit, setFarenheit] = useState('')
-   
-
-    if(celsius){
-
-    }else{
-
-    }
+    const [tipo, setTipo] = useState('')
 
     const handleConvert = (e:any) => {
         e.preventDefault()
-        
-        console.log(celsius)
-        console.log(farenheit)
 
-        const temperatura = temp
+        console.log(tipo)
 
-        if(Number(temperatura) > 0){
+        if(tipo === 'F'){
             const c = Number(temp)
-            const f = ((9 * c) + 160) / 5
+            const f = ((c * 9) / 5) + 32
             setConvert(convert + f)
-        }else if(Number(temperatura) > 32){
+        }else if(tipo === 'C'){
             const f = Number(temp)
             const c = (5*(f - 32)) / 9
             setConvert(convert + c)
         }
-
     }
 
     return(
@@ -55,11 +45,11 @@ export default function ConversorTemp(){
                     <div className="flex gap-5">
                         <div className="flex gap-1">
                             <label htmlFor="temp">ºC</label>
-                            <input type="radio" value={celsius} name="temp" id={`celsius`} onClick={(e:any) => setCelsius(e.target.value)}/>
+                            <input type="radio" value={`C`} name="temp" id={`celsius`} onChange={(e:any) => setTipo(e.target.value)}/>
                         </div>
                         <div className="flex gap-1">
                             <label htmlFor="temp">ºF</label>
-                            <input type="radio" value={farenheit} name="temp" id={`farenheit`} onClick={(e:any) => setFarenheit(e.target.value)}/>
+                            <input type="radio" value={`F`} name="temp" id={`farenheit`} onChange={(e:any) => setTipo(e.target.value)}/>
                         </div>
                     </div>
                     <input type="text" placeholder="Temperatura" onChange={(e:any) => setTemp(e.target.value)} />
