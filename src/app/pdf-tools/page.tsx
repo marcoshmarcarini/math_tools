@@ -39,7 +39,7 @@ export default function pdfTools(){
                 </div>
             </div>
             <div className={`${styles.pdfTctContent}`}>
-                <h2 className={` flex justify-center ${styles.pdfTitle}`}>Entendendo o PDF</h2>
+                <h2 className={`flex justify-center ${styles.pdfTitle}`}>Entendendo o PDF</h2>
                 <p className={`${styles.ptxt}`}>{p1}</p>
                 <p className={`${styles.ptxt}`}>{p2}</p>
                 <p className={`${styles.ptxt}`}>{p3}</p>
