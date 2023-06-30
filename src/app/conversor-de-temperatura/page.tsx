@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import Image from "next/image"
 import styles from '@/app/regra-de-3/Regra.module.css'
 import stylesPage from '@/app/conversor-de-temperatura/Conversor.module.css'
@@ -126,6 +127,23 @@ export default function ConversorTemp(){
                         alt={`Restart`}
                     />
                 </button>
+
+                <div className="flex align-items-center text-center lg:mb-0 lg:grid-cols-4 lg:text-left mt-5">
+                    <Link href={`/`}
+                    className="group rounded-lg border border-transparent px-4 py-5 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                    rel="noopener noreferrer"
+                    >
+                    <h2 className={` text-2xl font-semibold`}>
+                        Voltar{' '}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                        </span>
+                    </h2>
+                    {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                        Retornar.
+                    </p> */}
+                    </Link>
+                </div>
             </div>
             
             
